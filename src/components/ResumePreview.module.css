@@ -1,0 +1,102 @@
+/* Base Paper Styles */
+.resumePaper {
+  background: white;
+  width: 210mm;
+  min-height: 297mm;
+  padding: 20mm;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  color: #1a1a1a;
+  font-family: 'Inter', sans-serif;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+@media print {
+  .resumePaper {
+    box-shadow: none;
+    padding: 0;
+    width: 100%;
+  }
+}
+
+/* Base Defaults */
+.rHeader { margin-bottom: 20px; }
+.rName { font-size: 28px; font-weight: 700; margin-bottom: 4px; color: #111; }
+.rTitle { font-size: 16px; font-weight: 500; color: #555; margin-bottom: 12px; }
+.rContact { font-size: 13px; color: #666; margin-bottom: 16px; }
+.rSummary { font-size: 14px; line-height: 1.5; color: #333; }
+.rSection { margin-bottom: 24px; }
+.rHeading { font-size: 16px; font-weight: 700; border-bottom: 1px solid #ccc; padding-bottom: 6px; margin-bottom: 16px; text-transform: uppercase; color: #111; }
+.rItems { display: flex; flex-direction: column; gap: 16px; }
+.rItemHeader { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; }
+.rItemTitle { font-weight: 600; font-size: 15px; }
+.rItemDate { font-size: 13px; color: #666; }
+.rItemSub { font-size: 14px; font-style: italic; color: #555; margin-bottom: 6px; }
+.rItemDesc { font-size: 13px; line-height: 1.5; color: #444; white-space: pre-wrap; }
+.rSkills { font-size: 14px; line-height: 1.6; }
+
+/* 1. Classic */
+.template-classic {
+  font-family: "Times New Roman", Times, serif;
+}
+.template-classic .rName { text-align: center; font-size: 32px; }
+.template-classic .rTitle { text-align: center; }
+.template-classic .rContact { text-align: center; }
+.template-classic .rHeading { text-align: center; border-bottom: 2px solid #000; border-top: 2px solid #000; padding: 4px 0; }
+
+/* 2. Modern */
+.template-modern {
+  font-family: 'Inter', sans-serif;
+}
+.template-modern .rName { color: #2563eb; letter-spacing: -1px; }
+.template-modern .rHeading { color: #2563eb; border-bottom-width: 2px; border-bottom-color: #bfdbfe; }
+.template-modern .rItemTitle { color: #1e40af; }
+
+/* 3. Corporate */
+.template-corporate {
+  font-family: 'Arial', sans-serif;
+}
+.template-corporate .rHeader { border-left: 4px solid #334155; padding-left: 16px; }
+.template-corporate .rHeading { background: #f1f5f9; padding: 8px; border: none; }
+
+/* 4. Creative */
+.template-creative {
+  background: #fafafa;
+}
+.template-creative .rHeader { display: flex; flex-direction: column; align-items: flex-start; }
+.template-creative .rName { background: linear-gradient(90deg, #ec4899, #8b5cf6); -webkit-background-clip: text; color: transparent; font-size: 40px; }
+.template-creative .rHeading { border-bottom: none; display: inline-block; position: relative; margin-bottom: 24px; }
+.template-creative .rHeading::after { content: ''; position: absolute; left: 0; bottom: -4px; height: 4px; width: 40px; background: #ec4899; }
+
+/* 5. Minimal */
+.template-minimal {
+  font-weight: 300;
+}
+.template-minimal .rName { font-weight: 400; letter-spacing: 2px; }
+.template-minimal .rHeading { border-bottom: 1px solid #eee; text-transform: lowercase; font-weight: 400; letter-spacing: 1px; }
+.template-minimal * { color: #333 !important; }
+
+/* 6. Student */
+.template-student .rHeader { text-align: center; }
+.template-student .rSection { background: #f8fafc; padding: 16px; border-radius: 8px; border: 1px solid #e2e8f0; }
+.template-student .rHeading { border-bottom: none; color: #0f172a; }
+
+/* 7. Dark Theme */
+.template-dark {
+  background: #1e1e20;
+  color: #e4e4e7;
+}
+.template-dark .rName, .template-dark .rHeading { color: #fff; }
+.template-dark .rHeading { border-bottom-color: #3f3f46; }
+.template-dark .rTitle, .template-dark .rContact, .template-dark .rItemDate { color: #a1a1aa; }
+.template-dark .rSummary, .template-dark .rItemDesc, .template-dark .rItemSub { color: #d4d4d8; }
+
+/* 8. Hybrid Flex */
+.template-hybrid {}
+@media (min-width: 600px) {
+  .template-hybrid .rBody { display: grid; grid-template-columns: 2fr 1fr; gap: 32px; }
+  .template-hybrid .rSkillsSection { grid-column: 2; grid-row: 1; }
+}
+.template-hybrid .rHeader { border-bottom: 4px solid #14b8a6; padding-bottom: 16px; margin-bottom: 32px; }
+.template-hybrid .rName { color: #0d9488; }
