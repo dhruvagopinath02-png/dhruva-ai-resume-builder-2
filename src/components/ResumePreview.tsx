@@ -1,4 +1,3 @@
-import React from 'react'
 import { ResumeData } from '../pages/BuilderPage'
 import styles from './ResumePreview.module.css'
 
